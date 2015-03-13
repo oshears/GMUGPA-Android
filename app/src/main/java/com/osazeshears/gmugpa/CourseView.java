@@ -192,8 +192,6 @@ public class CourseView extends ActionBarActivity{
 
         // Populate the list, through the adapter
 
-
-
         courseListView = (ListView) findViewById(R.id.courseListView);
         final CourseEntryAdapter courseEntryAdapter = new CourseEntryAdapter(this, R.layout.list_item);
         courseListView.setAdapter(courseEntryAdapter);

@@ -28,6 +28,7 @@ public final class CourseEntryAdapter extends ArrayAdapter<Course> {
         final Course entry = getItem(position);
 
         // Setting the title view is straightforward
+        System.out.println("Text should display: "+entry.courseName);
         viewHolder.titleView.setText(entry.courseName);
 
         // Setting the subTitle view
