@@ -15,12 +15,14 @@ import java.util.ArrayList;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import com.osazeshears.gmugpa.db.*;
 
 public class CourseView extends ActionBarActivity{
 
     Course[] userCourses = new Course[0];
 
     private ListView courseListView;
+    private CourseDBHelper helper;
 
     static final int GET_NEW_COURSE_REQUEST = 1; //Request Code
     static final int GET_UPDATED_COURSE_REQUEST = 2;
@@ -57,12 +59,7 @@ public class CourseView extends ActionBarActivity{
         courseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, int position,long id) {
                 final int pos = position;
-                /*Delte Course Clicked
-                List<Course>CurrCourses=getListCourses();
-                CurrCourses.remove(position);
-                userCourses=makeCourseArray(CurrCourses);
-                updateCourseList();
-                */
+
                 new AlertDialog.Builder(caller)
                         .setTitle("Modify Entry")
                         .setMessage("What would you like to do to this entry?")

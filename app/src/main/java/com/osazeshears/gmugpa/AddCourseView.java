@@ -14,11 +14,14 @@ import android.view.View;
 import android.util.Log;
 import android.content.Intent;
 
+import com.osazeshears.gmugpa.db.CourseDBHelper;
+
 
 public class AddCourseView extends ActionBarActivity implements AdapterView.OnItemSelectedListener{
 
     Course newCourse;
     Spinner gradeSpinner;
+    private CourseDBHelper helper;
 
 
     @Override
